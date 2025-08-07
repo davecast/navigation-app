@@ -8,7 +8,8 @@ const App = () => {
 
   return (
    //Redirect to products screen
-   <Redirect href='/tabs/home' />
+  //  <Redirect href='/tabs/home' />
+   <Redirect href='/drawer' />
    
   
     // <View className='flex-1 pr-4 pl-4' style={{ paddingTop: insets.top }}>

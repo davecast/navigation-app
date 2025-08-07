@@ -1,11 +1,11 @@
-import { useFonts } from 'expo-font'
-import { Slot, SplashScreen } from 'expo-router'
-import { StatusBar } from 'expo-status-bar'
-import React, { useEffect } from 'react'
-import { View } from 'react-native'
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
+import { useFonts } from 'expo-font';
+import { Slot, SplashScreen } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import React, { useEffect } from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
-import "./global.css"
+import "./global.css";
 
 SplashScreen.preventAutoHideAsync()
 
@@ -35,11 +35,13 @@ const RootLayout = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView className='flex-1' edges={['left', 'right']}>
-        <View className='flex-1 bg-gray-200'>
+        <GestureHandlerRootView style={{ flex: 1 }}>
           <Slot />
           {/* <Stack /> */}
           <StatusBar style="dark" />
-        </View>
+        </GestureHandlerRootView>
+       
+  
       </SafeAreaView>
     </SafeAreaProvider>
   )
