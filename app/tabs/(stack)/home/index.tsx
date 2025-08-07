@@ -18,21 +18,24 @@ const HomeScreen = () => {
 
       <CustomButton 
         color='primary'
-        onPress={() => router.push('/products')}
+        // onPress={() => router.push('/products')}
+        onPress={() => router.push('/tabs/(stack)/products')}
       >
         Products
       </CustomButton>
 
       <CustomButton 
         color='secondary'
-        onPress={() => router.push('/profile')}
+        // onPress={() => router.push('/profile')}
+        onPress={() => router.push('/tabs/(stack)/profile')}
       >
         Profile
       </CustomButton>
 
       <CustomButton 
         color='tertiary'
-        onPress={() => router.push('/settings')}
+        // onPress={() => router.push('/settings')}
+        onPress={() => router.push('/tabs/(stack)/settings')}
       >
         Settings
       </CustomButton>
