@@ -20,7 +20,6 @@ const CustomButton = ({ children, color = 'primary', variant = 'container-only',
     secondary: 'text-secondary',
     tertiary: 'text-tertiary',
   }[color]
-  
 
   const btnVariant = {
     'text-only': 'p-4',

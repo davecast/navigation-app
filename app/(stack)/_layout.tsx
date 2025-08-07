@@ -3,7 +3,15 @@ import React from 'react'
 
 const StackLayout = () => {
   return (
-    <Stack>
+    <Stack
+      screenOptions={{
+        // headerShown: false,
+        headerShadowVisible: false,
+        contentStyle: {
+          backgroundColor: '#fff',
+        },
+      }}
+    >
       <Stack.Screen 
         name='home/index' 
         options={{ 
@@ -14,6 +22,13 @@ const StackLayout = () => {
         name='products/index' 
         options={{ 
           title: "Products", 
+        }} 
+      />
+      <Stack.Screen 
+        name='products/[id]/index' 
+        options={{ 
+          title: "Product Details",
+          // El título se puede sobrescribir desde el componente individual
         }} 
       />
       <Stack.Screen 
