@@ -6,8 +6,10 @@ import React from 'react';
 const DrawerLayout = () => {
   return (
     <Drawer
+      
       drawerContent={CustomDrawer}
       screenOptions={{
+        headerShown: false,
         overlayColor: 'rgba(0, 0, 0, 0.5)',
         drawerActiveTintColor: 'indigo',
         drawerContentStyle: {
@@ -37,6 +39,16 @@ const DrawerLayout = () => {
           title: 'Schedule',
           drawerIcon: ({ color, size }) => (
             <Ionicons size={size} name="calendar-outline" color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="tabs"
+        options={{
+          drawerLabel: 'Tabs + Stack',
+          title: 'Tabs + Stack',
+          drawerIcon: ({ color, size }) => (
+            <Ionicons size={size} name="grid-outline" color={color} />
           ),
         }}
       />
