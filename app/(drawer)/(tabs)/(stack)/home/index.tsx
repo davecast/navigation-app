@@ -1,9 +1,17 @@
 import CustomButton from '@/components/custom-button'
-import { router } from 'expo-router'
+import { DrawerActions } from '@react-navigation/native'
+import { router, useNavigation } from 'expo-router'
 import React from 'react'
 import { View } from 'react-native'
 
 const HomeScreen = () => {
+
+  const navigation = useNavigation()
+
+  const onToggleDrawer = () => {
+    navigation.dispatch(DrawerActions.toggleDrawer())
+  }
+
   return (
     <View className='flex-1 p-4 gap-4' >
       
@@ -38,6 +46,13 @@ const HomeScreen = () => {
         onPress={() => router.push('/settings')}
       >
         Settings
+      </CustomButton>
+
+      <CustomButton 
+        color='primary'
+        onPress={onToggleDrawer}
+      >
+        Open menu
       </CustomButton>
 {/* 
       <CustomButton 

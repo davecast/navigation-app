@@ -9,7 +9,7 @@ const DrawerLayout = () => {
       
       drawerContent={CustomDrawer}
       screenOptions={{
-        headerShown: false,
+        // headerShown: false,
         overlayColor: 'rgba(0, 0, 0, 0.5)',
         drawerActiveTintColor: 'indigo',
         drawerContentStyle: {
@@ -45,6 +45,7 @@ const DrawerLayout = () => {
       <Drawer.Screen
         name="(tabs)"
         options={{
+          headerShown: false,
           drawerLabel: 'Tabs + Stack',
           title: 'Tabs + Stack',
           drawerIcon: ({ color, size }) => (

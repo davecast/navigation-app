@@ -4,11 +4,13 @@ import React from 'react';
 
 const TabsLayout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'indigo-100', headerShown: false }}>
+    <Tabs screenOptions={{ headerShadowVisible: false, tabBarActiveTintColor: 'indigo-100' }}>
       <Tabs.Screen
         name="(stack)"
         options={{
           title: 'Stack',
+          headerShown: false,
+          headerShadowVisible: false,
           tabBarIcon: ({ color }) => <Ionicons size={28} name="list-outline" color={color} />,
         }}
       />

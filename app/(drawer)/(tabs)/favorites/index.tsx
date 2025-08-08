@@ -3,8 +3,8 @@ import { Text, View } from 'react-native'
 
 const FavoritesScreen = () => {
   return (
-    <View>
-      <Text>FavoritesScreen</Text>
+    <View className='flex-1 items-center justify-center'>
+      <Text className='text-2xl font-bold'>FavoritesScreen</Text>
     </View>
   )
 }
