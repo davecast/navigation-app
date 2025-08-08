@@ -43,7 +43,7 @@ const DrawerLayout = () => {
         }}
       />
       <Drawer.Screen
-        name="tabs"
+        name="(tabs)"
         options={{
           drawerLabel: 'Tabs + Stack',
           title: 'Tabs + Stack',
